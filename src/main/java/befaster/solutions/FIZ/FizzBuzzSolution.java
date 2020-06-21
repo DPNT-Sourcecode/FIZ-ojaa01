@@ -18,12 +18,13 @@ public class FizzBuzzSolution {
             copy = copy/10;
         }
 
-        if((number%3 == 0 && number%5 != 0) || (three && number%5 != 0)) {
+        if((number%3 == 0 && number%5 != 0) || (three))
+        {
             result = "fizz";
             ok1 = 1;
         }
 
-        if((number%3 != 0 && number%5 == 0) || (number%3 != 0 && five))
+        if((number%3 != 0 && number%5 == 0) || (five))
            {
                result = "buzz";
                ok2 = 1;
@@ -36,6 +37,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
