@@ -6,11 +6,15 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
         String result = String.valueOf(number);
-        Boolean three = false, five = false;
+        Boolean three = false, five = false, identical = true;
         Integer copy = number;
+        int id = copy%10;
         int ok1 = 0, ok2 = 0;
 
+
         while(copy!=0){
+            if(copy%10 != id)
+                identical = false;
             if(copy%10 == 3)
                 three = true;
             if(copy%10 == 5)
@@ -33,10 +37,17 @@ public class FizzBuzzSolution {
         if((ok1 == 1 && ok2 == 1) || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
+        if(number > 10 && identical)
+            result = result + " deluxe";
+
+        if(result.equals(String.valueOf(number)) && number > 10 && identical)
+            result = "deluxe";
+
         return result;
     }
 
 }
+
 
 
 
