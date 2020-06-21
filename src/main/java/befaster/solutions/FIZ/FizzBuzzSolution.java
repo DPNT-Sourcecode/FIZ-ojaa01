@@ -8,7 +8,7 @@ public class FizzBuzzSolution {
         String result = String.valueOf(number);
         Boolean three = false, five = false;
         Integer copy = number;
-        int ok = 0;
+        int ok1 = 0, ok2 = 0;
 
         while(copy!=0){
             if(copy%10 == 3)
@@ -18,27 +18,25 @@ public class FizzBuzzSolution {
             copy = copy/10;
         }
 
-        if((number%3 == 0 && number%5 != 0) || (three && number%5 != 0))
-        {
+        if((number%3 == 0 && number%5 != 0) || (three && number%5 != 0)) {
             result = "fizz";
-            ok += 1;
+            ok1 = 1;
         }
 
-        else if((number%3 != 0 && number%5 == 0) || (number%3 != 0 && five))
+        if((number%3 != 0 && number%5 == 0) || (number%3 != 0 && five))
            {
                result = "buzz";
-               ok += 1;
+               ok2 = 1;
            }
 
-        else if(ok == 2 || (number%3 == 0 && number%5 == 0))
+        if((ok1 == 1 && ok2 == 1) || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
-        else
-            result = String.valueOf(number);
         return result;
     }
 
 }
+
 
 
 
