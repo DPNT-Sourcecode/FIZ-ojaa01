@@ -37,16 +37,18 @@ public class FizzBuzzSolution {
         if((ok1 == 1 && ok2 == 1) || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
-        if(number > 10 && identical && !result.equals(String.valueOf(number)) && number%2 == 0)
+        boolean bool = (number % 3 == 0 && three) || (number % 5 == 0 && five);
+
+        if(bool && number%2 == 0)
             result = result + " deluxe";
 
-        else if(number > 10 && identical && !result.equals(String.valueOf(number)) && number%2 != 0)
+        else if(bool && number%2 != 0)
             result = result + " fake deluxe";
 
-        else if(result.equals(String.valueOf(number)) && number > 10 && identical && number %2 == 0)
+        else if(result.equals(String.valueOf(number)) && bool && number %2 == 0)
             result = "deluxe";
 
-        else if(result.equals(String.valueOf(number)) && number > 10 && identical && number %2 != 0)
+        else if(result.equals(String.valueOf(number)) && bool && number %2 != 0)
             result = "fake deluxe";
         else
             return result;
@@ -55,4 +57,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
