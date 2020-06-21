@@ -30,11 +30,12 @@ public class FizzBuzzSolution {
                ok += 1;
            }
 
-        if(ok == 2)
+        if(ok == 2 || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
         return result;
     }
 
 }
+
 
