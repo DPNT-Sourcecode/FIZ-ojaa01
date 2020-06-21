@@ -37,7 +37,7 @@ public class FizzBuzzSolution {
         if((ok1 == 1 && ok2 == 1) || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
-        if(number > 10 && identical)
+        if(number > 10 && identical && !result.equals(String.valueOf(number)))
             result = result + " deluxe";
 
         if(result.equals(String.valueOf(number)) && number > 10 && identical)
@@ -47,9 +47,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
-
-
-
-
