@@ -24,18 +24,21 @@ public class FizzBuzzSolution {
             ok += 1;
         }
 
-        if((number%3 != 0 && number%5 == 0) || (number%3 != 0 && five))
+        else if((number%3 != 0 && number%5 == 0) || (number%3 != 0 && five))
            {
                result = "buzz";
                ok += 1;
            }
 
-        if(ok == 2 || (number%3 == 0 && number%5 == 0))
+        else if(ok == 2 || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
+        else
+            result = String.valueOf(number);
         return result;
     }
 
 }
+
 
 
