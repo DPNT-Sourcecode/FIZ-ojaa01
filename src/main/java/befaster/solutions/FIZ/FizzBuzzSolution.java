@@ -37,13 +37,22 @@ public class FizzBuzzSolution {
         if((ok1 == 1 && ok2 == 1) || (number%3 == 0 && number%5 == 0))
             result = "fizz buzz";
 
-        if(number > 10 && identical && !result.equals(String.valueOf(number)))
+        if(number > 10 && identical && !result.equals(String.valueOf(number)) && number%2 == 0)
             result = result + " deluxe";
 
-        if(result.equals(String.valueOf(number)) && number > 10 && identical)
+        else if(number > 10 && identical && !result.equals(String.valueOf(number)) && number%2 != 0)
+            result = result + " fake deluxe";
+
+        else if(result.equals(String.valueOf(number)) && number > 10 && identical && number %2 == 0)
             result = "deluxe";
+
+        else if(result.equals(String.valueOf(number)) && number > 10 && identical && number %2 != 0)
+            result = "fake deluxe";
+        else
+            return result;
 
         return result;
     }
 
 }
+
